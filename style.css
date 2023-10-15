@@ -1,0 +1,58 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --ff: Arial, Helvetica, sans-serif;
+}
+.list li {
+    list-style: none;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #3c3c3c;
+    font-family: var(--ff);
+}
+.list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.list li a{
+    position: relative;
+    display: flex;
+    font-size: 3em;
+    line-height: 1.1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+}
+.list li a span {
+    position: relative;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.list li a span .out {
+    display: inline-flex;
+}
+
+.list li a:hover span .out {
+    transform: translateY(-100%);
+}
+
+.list li a span .in {
+     position: absolute;
+     left: 0;
+     color: blue;
+     transform: translateY(100%);
+}
+
+.list li a:hover span .in {
+    transform: translateY(0%);
+}
